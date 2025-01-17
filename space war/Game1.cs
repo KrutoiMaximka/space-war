@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using space_war.Classes;
 
 namespace space_war
 {
@@ -8,6 +9,8 @@ namespace space_war
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+
+        private Player _player;
 
         public Game1()
         {
@@ -18,7 +21,7 @@ namespace space_war
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            Player _player = new Player();
 
             base.Initialize();
         }
