@@ -21,7 +21,7 @@ namespace space_war
 
         protected override void Initialize()
         {
-            Player _player = new Player();
+           _player = new Player();
 
             base.Initialize();
         }
@@ -29,6 +29,7 @@ namespace space_war
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            _player.LoadContent(Content);
 
             // TODO: use this.Content to load your game content here
         }
@@ -39,6 +40,7 @@ namespace space_war
                 Exit();
 
             // TODO: Add your update logic here
+            _player.Update();
 
             base.Update(gameTime);
         }
@@ -48,6 +50,12 @@ namespace space_war
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            _spriteBatch.Begin();
+
+            _player.Draw(_spriteBatch);
+
+            _spriteBatch.End();
+
 
             base.Draw(gameTime);
         }
