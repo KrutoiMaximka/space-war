@@ -11,6 +11,7 @@ namespace space_war
         private SpriteBatch _spriteBatch;
 
         private Player _player;
+        private Space _space;
 
         public Game1()
         {
@@ -21,7 +22,8 @@ namespace space_war
 
         protected override void Initialize()
         {
-           _player = new Player();
+            _player = new Player();
+            _space = new Space();
 
             base.Initialize();
         }
@@ -30,6 +32,7 @@ namespace space_war
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             _player.LoadContent(Content);
+            _space.LoadContent(Content);
 
             // TODO: use this.Content to load your game content here
         }
@@ -40,8 +43,8 @@ namespace space_war
                 Exit();
 
             // TODO: Add your update logic here
-            _player.Update();
-
+            _player.Update(_graphics.PreferredBackBufferHeight,_graphics.PreferredBackBufferWidth);
+            _space.Update();
             base.Update(gameTime);
         }
 
@@ -52,6 +55,7 @@ namespace space_war
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
+            _space.Draw(_spriteBatch);
             _player.Draw(_spriteBatch);
 
             _spriteBatch.End();
