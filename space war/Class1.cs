@@ -17,7 +17,7 @@ namespace space_war.Classes
         public Space()
         {
             _texture = null;
-            _position1 = new Vector2(0, _texture.Height);
+            _position1 = new Vector2(0,0);
             _position2 = Vector2.Zero; // new Vector2(0, 0);
             _speed = 1;
         }
@@ -29,7 +29,7 @@ namespace space_war.Classes
         public void Update()
         {
             _position1.Y += _speed;
-            _position2 = Vector2.Zero;
+            _position2.Y += _speed;
             if(_position1.Y >= 0)
             {
                 _position1.Y = -_texture.Height;
