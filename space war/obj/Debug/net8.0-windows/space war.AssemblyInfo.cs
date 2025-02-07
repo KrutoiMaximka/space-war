@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("space war")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+019ee5f7d5732c5e14e2f375a8c35a351c57fa50")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00448a91306ad6229abcbf79fc6a33d8668044ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("space war")]
 [assembly: System.Reflection.AssemblyTitleAttribute("space war")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

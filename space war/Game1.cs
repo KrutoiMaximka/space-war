@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using space_war.Classes;
@@ -12,6 +13,8 @@ namespace space_war
 
         private Player _player;
         private Space _space;
+       // private Asteroid _asteroid;
+        private List<Asteroid> asteroids;
 
         public Game1()
         {
@@ -22,8 +25,10 @@ namespace space_war
 
         protected override void Initialize()
         {
+           // _asteroid = new Asteroid();
             _player = new Player();
             _space = new Space();
+            asteroids = new List<Asteroid>();
 
             base.Initialize();
         }
@@ -33,6 +38,15 @@ namespace space_war
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             _player.LoadContent(Content);
             _space.LoadContent(Content);
+           // _asteroid.LoadContent(Content);
+
+            for(int i = 0;i < 10;i++)
+            {
+                Asteroid asteroid = new Asteroid(new Vector2(i * 40, 0));
+                asteroid.LoadContent(Content);
+
+                asteroids.Add(asteroid);
+            }
 
             // TODO: use this.Content to load your game content here
         }
@@ -45,6 +59,12 @@ namespace space_war
             // TODO: Add your update logic here
             _player.Update(_graphics.PreferredBackBufferHeight,_graphics.PreferredBackBufferWidth);
             _space.Update();
+           // _asteroid.Update();
+
+            foreach (Asteroid asteroid in asteroids)
+            {
+                asteroid.Update();
+            }
             base.Update(gameTime);
         }
 
@@ -57,6 +77,11 @@ namespace space_war
 
             _space.Draw(_spriteBatch);
             _player.Draw(_spriteBatch);
+
+            foreach (Asteroid asteroid in asteroids)
+            {
+                asteroid.Draw(_spriteBatch);
+            }
 
             _spriteBatch.End();
 

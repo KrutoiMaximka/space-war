@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\maxim\\source\\repos\\space war\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF48FEF0-C13C-4CC8-8996-F88DF3A183B8}|space war\\space war.csproj|c:\\users\\maxim\\source\\repos\\space war\\space war\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF48FEF0-C13C-4CC8-8996-F88DF3A183B8}|space war\\space war.csproj|solutionrelative:space war\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF48FEF0-C13C-4CC8-8996-F88DF3A183B8}|space war\\space war.csproj|c:\\users\\maxim\\source\\repos\\space war\\space war\\classes\\asteroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF48FEF0-C13C-4CC8-8996-F88DF3A183B8}|space war\\space war.csproj|solutionrelative:space war\\classes\\asteroid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF48FEF0-C13C-4CC8-8996-F88DF3A183B8}|space war\\space war.csproj|c:\\users\\maxim\\source\\repos\\space war\\space war\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{EF48FEF0-C13C-4CC8-8996-F88DF3A183B8}|space war\\space war.csproj|c:\\users\\maxim\\source\\repos\\space war\\space war\\classes\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF48FEF0-C13C-4CC8-8996-F88DF3A183B8}|space war\\space war.csproj|solutionrelative:space war\\classes\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF48FEF0-C13C-4CC8-8996-F88DF3A183B8}|space war\\space war.csproj|c:\\users\\maxim\\source\\repos\\space war\\space war\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF48FEF0-C13C-4CC8-8996-F88DF3A183B8}|space war\\space war.csproj|solutionrelative:space war\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,12 +31,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Asteroid.cs",
+              "DocumentMoniker": "C:\\Users\\maxim\\source\\repos\\space war\\space war\\Classes\\Asteroid.cs",
+              "RelativeDocumentMoniker": "space war\\Classes\\Asteroid.cs",
+              "ToolTip": "C:\\Users\\maxim\\source\\repos\\space war\\space war\\Classes\\Asteroid.cs",
+              "RelativeToolTip": "space war\\Classes\\Asteroid.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T17:01:34.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\maxim\\source\\repos\\space war\\space war\\Class1.cs",
               "RelativeDocumentMoniker": "space war\\Class1.cs",
               "ToolTip": "C:\\Users\\maxim\\source\\repos\\space war\\space war\\Class1.cs",
               "RelativeToolTip": "space war\\Class1.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwB8AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-31T17:16:49.8Z",
               "EditorCaption": ""
@@ -45,7 +62,7 @@
               "RelativeDocumentMoniker": "space war\\Classes\\Player.cs",
               "ToolTip": "C:\\Users\\maxim\\source\\repos\\space war\\space war\\Classes\\Player.cs",
               "RelativeToolTip": "space war\\Classes\\Player.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAkwBkAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-17T17:46:38.869Z",
               "EditorCaption": ""
@@ -58,7 +75,7 @@
               "RelativeDocumentMoniker": "space war\\Game1.cs",
               "ToolTip": "C:\\Users\\maxim\\source\\repos\\space war\\space war\\Game1.cs",
               "RelativeToolTip": "space war\\Game1.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAmwCsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwFIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-17T17:42:36.026Z",
               "EditorCaption": ""
