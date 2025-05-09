@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -45,6 +46,12 @@ namespace space_war
                 Asteroid asteroid = new Asteroid(new Vector2(i * 40, 0));
                 asteroid.LoadContent(Content);
 
+                Random random = new Random();
+                int x = random.Next(0, _graphics.PreferredBackBufferWidth - asteroid.Width);
+                int y = random.Next(0, _graphics.PreferredBackBufferHeight);
+
+
+                asteroid.Position = new Vector2(x,-y);
                 asteroids.Add(asteroid);
             }
 
@@ -59,12 +66,10 @@ namespace space_war
             // TODO: Add your update logic here
             _player.Update(_graphics.PreferredBackBufferHeight,_graphics.PreferredBackBufferWidth);
             _space.Update();
-           // _asteroid.Update();
+            // _asteroid.Update();
 
-            foreach (Asteroid asteroid in asteroids)
-            {
-                asteroid.Update();
-            }
+            UpdateAsteroids();
+
             base.Update(gameTime);
         }
 
@@ -87,6 +92,31 @@ namespace space_war
 
 
             base.Draw(gameTime);
+        }
+        private void UpdateAsteroids()
+        {
+            for (int i = 0; i < asteroids.Count; i++)
+            {
+                Asteroid asteroid = asteroids[i];
+                asteroid.Update();
+
+                if (asteroid.Position.Y > _graphics.PreferredBackBufferHeight)
+                {
+                    Random random = new Random();
+                    int x = random.Next(0, _graphics.PreferredBackBufferWidth - asteroid.Width);
+                    int y = random.Next(0, _graphics.PreferredBackBufferHeight);
+
+
+                    asteroid.Position = new Vector2(x, -y);
+
+
+                }
+                if (asteroid._Collis.Intersects(_player._Collis))
+                {
+                    asteroids.Remove(asteroid);
+                    i--;
+                }
+            }
         }
     }
 }

@@ -16,6 +16,38 @@ namespace space_war.Classes
     {
         private Texture2D _texture;
         private Vector2 _position;
+        private Rectangle _collis;
+
+        public Rectangle _Collis
+        {
+            get
+            {
+                return _collis;
+            }
+        }
+
+
+
+        public int Width
+        {
+            get
+            {
+                return _texture.Width;
+            }
+        }
+
+        public Vector2 Position
+        {
+            set
+            {
+                _position = value;
+            }
+
+            get
+            {
+               return _position;
+            }
+        }
 
         public Asteroid() : this(Vector2.Zero)
         {
@@ -44,6 +76,7 @@ namespace space_war.Classes
         public void Update()
         {
             _position.Y += 2;
+            _collis = new Rectangle((int)_position.X, (int)_position.Y, _texture.Width, _texture.Height);
         }
     }
 }

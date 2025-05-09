@@ -16,12 +16,23 @@ namespace space_war.Classes
         private float _speed;
         private Vector2 _position;
         private Texture2D _texture;
+
+        private Rectangle _collis;
+
+        public Rectangle _Collis
+        {
+            get
+            {
+                return _collis;
+            }
+        }
         public Player()
         {
             _position = new Vector2(30,30);
             _texture = null;
 
            _speed = 7;
+            _collis = new Rectangle((int)_position.X, (int)_position.Y, 0 ,0);
         }
         public void LoadContent(ContentManager content)
         {
@@ -69,6 +80,8 @@ namespace space_war.Classes
                 _position.Y = heightScreen - _texture.Height;
             }
             #endregion
+
+            _collis = new Rectangle((int)_position.X, (int)_position.Y, _texture.Width,_texture.Height );
         }
 
 
